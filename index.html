@@ -1,0 +1,2292 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Dra. Letícia Peixoto — Odontologia Especializada em Vitória, ES. Doutora em Dentística, Professora da UFES, 20+ anos de experiência. Agende sua consulta.">
+<title>Letícia Peixoto · Odontologia Especializada · Vitória, ES</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================
+   TOKENS CSS — DESIGN SYSTEM v1.0
+   ============================================ */
+:root {
+  --bg-primary: #F7F3EC;
+  --bg-secondary: #FDFCF9;
+  --bg-dark: #231F1B;
+  --color-cream: #EDE5D8;
+  --color-warm-white: #FDFCF9;
+
+  --text-primary: #3D3630;
+  --text-secondary: #6B5F56;
+  --text-muted: #9E948D;
+
+  --accent: #C9A97A;
+  --accent-dark: #8F6D3D;
+
+  --oak-100: #F0E6D3;
+  --oak-200: #DEC9A4;
+  --oak-300: #C9A97A;
+  --oak-400: #B08B57;
+  --oak-500: #8F6D3D;
+
+  --color-gold: #C8A24A;
+  --gold-light: #E8C97A;
+
+  --brown-80: #3D3630;
+  --brown-60: #6B5F56;
+  --brown-40: #9E948D;
+  --brown-20: #CEC8C2;
+
+  --border: #D9CCBA;
+  --border-light: #F0E6D3;
+
+  --font-display: 'Cormorant Garamond', serif;
+  --font-body: 'Jost', sans-serif;
+
+  --shadow-sm: 0 2px 12px rgba(35,31,27,.06);
+  --shadow-md: 0 8px 32px rgba(35,31,27,.10);
+  --shadow-lg: 0 24px 64px rgba(35,31,27,.14);
+
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-full: 9999px;
+
+  --ease: 0.3s ease;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+}
+
+/* ============================================
+   RESET & BASE
+   ============================================ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; font-size: 16px; }
+
+body {
+  font-family: var(--font-body);
+  font-weight: 300;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+
+/* ============================================
+   TYPOGRAPHY SYSTEM
+   ============================================ */
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.625rem;
+  font-weight: 400;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.h-hero {
+  font-family: var(--font-display);
+  font-size: clamp(2.8rem, 5vw, 5rem);
+  font-weight: 300;
+  line-height: 1.1;
+  color: var(--text-primary);
+}
+
+.h-section {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3vw, 2.5rem);
+  font-weight: 300;
+  line-height: 1.15;
+}
+
+.h-sub {
+  font-family: var(--font-display);
+  font-size: 1.875rem;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.h-card {
+  font-family: var(--font-display);
+  font-size: 1.375rem;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.italic-accent {
+  font-style: italic;
+  color: var(--accent-dark);
+}
+
+.dark-section .italic-accent { color: var(--accent); }
+
+.body-lg {
+  font-size: 0.9375rem;
+  font-weight: 300;
+  line-height: 1.9;
+  color: var(--text-secondary);
+}
+
+.body {
+  font-size: 0.875rem;
+  font-weight: 300;
+  line-height: 1.85;
+  color: var(--text-secondary);
+}
+
+.caption {
+  font-size: 0.75rem;
+  font-weight: 300;
+  color: var(--text-muted);
+}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-body);
+  font-size: 0.625rem;
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  padding: 14px 28px;
+  border-radius: var(--radius-sm);
+  transition: var(--ease);
+  cursor: pointer;
+  border: none;
+  white-space: nowrap;
+}
+
+.btn-dark {
+  background: var(--bg-dark);
+  color: var(--color-warm-white);
+}
+.btn-dark:hover { background: var(--accent-dark); }
+
+.btn-primary {
+  background: var(--accent);
+  color: var(--bg-dark);
+}
+.btn-primary:hover { background: var(--accent-dark); color: var(--color-warm-white); }
+
+.btn-outline {
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+}
+.btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+
+.btn-ghost {
+  background: transparent;
+  color: var(--text-muted);
+  padding-left: 0;
+  padding-right: 0;
+}
+.btn-ghost:hover { color: var(--accent); }
+
+.btn-arrow::after { content: '→'; font-size: 0.75rem; }
+
+/* ============================================
+   LAYOUT UTILITIES
+   ============================================ */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+}
+
+.container-sm {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+}
+
+.section-pad { padding: var(--space-8) 0; }
+.section-pad-lg { padding: 96px 0; }
+
+/* ============================================
+   SECTION PATTERNS
+   ============================================ */
+.light-section { background: var(--bg-primary); }
+.alt-section { background: var(--bg-secondary); }
+.cream-section { background: var(--color-cream); }
+.dark-section {
+  background: var(--bg-dark);
+  color: var(--color-warm-white);
+}
+.dark-section .body, .dark-section .body-lg {
+  color: rgba(253,252,249,0.55);
+}
+.dark-section .eyebrow { color: var(--accent); }
+.dark-section .h-section,
+.dark-section .h-sub,
+.dark-section .h-hero { color: var(--color-warm-white); }
+.dark-section .text-muted { color: rgba(253,252,249,0.35); }
+
+/* ============================================
+   DIVIDER
+   ============================================ */
+.divider {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-bottom: var(--space-5);
+}
+.divider-line {
+  height: 1px;
+  background: var(--accent);
+  opacity: 0.4;
+  flex: 0 0 40px;
+}
+
+/* ============================================
+   NAVIGATION
+   ============================================ */
+#nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  padding: 0 var(--space-6);
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background 0.4s ease, box-shadow 0.4s ease;
+}
+
+#nav.scrolled {
+  background: rgba(253,252,249,0.97);
+  box-shadow: var(--shadow-sm);
+  backdrop-filter: blur(12px);
+}
+
+.nav-logo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.nav-logo-name {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  line-height: 1;
+}
+
+.nav-logo-tagline {
+  font-family: var(--font-body);
+  font-size: 0.5rem;
+  font-weight: 300;
+  letter-spacing: 0.50em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  line-height: 1;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-7);
+  list-style: none;
+}
+
+.nav-links a {
+  font-size: 0.625rem;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  transition: color var(--ease);
+}
+
+.nav-links a:hover { color: var(--accent); }
+
+.nav-cta { margin-left: var(--space-5); }
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 4px;
+}
+.hamburger span {
+  display: block;
+  width: 22px;
+  height: 1px;
+  background: var(--text-primary);
+  transition: var(--ease);
+}
+
+/* Mobile Nav */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 72px; left: 0; right: 0;
+  background: var(--bg-secondary);
+  padding: var(--space-6);
+  z-index: 99;
+  border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow-md);
+  flex-direction: column;
+  gap: var(--space-5);
+}
+.mobile-menu.open { display: flex; }
+.mobile-menu a {
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--border-light);
+}
+
+/* ============================================
+   HERO
+   ============================================ */
+#hero {
+  min-height: 100vh;
+  background: var(--bg-primary);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding-top: 72px;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-bg-ornament {
+  position: absolute;
+  top: -100px; right: -100px;
+  width: 600px; height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--oak-100) 0%, transparent 70%);
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.hero-content {
+  padding: var(--space-8) var(--space-8) var(--space-8) var(--space-8);
+  max-width: 600px;
+  animation: fadeUp 1s ease both;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-full);
+  padding: var(--space-2) var(--space-4);
+  margin-bottom: var(--space-6);
+  box-shadow: var(--shadow-sm);
+}
+
+.hero-badge-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  animation: pulse-dot 2s infinite;
+}
+
+.hero-badge span {
+  font-size: 0.6rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.hero-title {
+  margin-bottom: var(--space-5);
+}
+
+.hero-title .line2 {
+  display: block;
+  font-style: italic;
+  color: var(--accent-dark);
+}
+
+.hero-desc {
+  margin-bottom: var(--space-7);
+  max-width: 420px;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+  margin-bottom: var(--space-8);
+}
+
+.hero-stats {
+  display: flex;
+  gap: var(--space-7);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--border-light);
+}
+
+.hero-stat-num {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--text-primary);
+  line-height: 1;
+  display: block;
+}
+
+.hero-stat-label {
+  font-size: 0.6rem;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  display: block;
+  margin-top: 4px;
+}
+
+.hero-visual {
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  overflow: hidden;
+}
+
+.hero-image-wrap {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--oak-100) 0%, var(--color-cream) 100%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.hero-image-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.15;
+}
+
+/* Floating card no hero */
+.hero-floating-card {
+  position: absolute;
+  bottom: 80px;
+  left: -24px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: var(--space-4) var(--space-5);
+  box-shadow: var(--shadow-lg);
+  animation: floatCard 6s ease-in-out infinite;
+  min-width: 220px;
+}
+
+.hero-card-head {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-3);
+}
+
+.hero-card-icon {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: var(--oak-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.hero-card-title {
+  font-family: var(--font-display);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.hero-card-sub {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+}
+
+.hero-card-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+  padding: 3px 0;
+}
+
+.hero-card-item::before {
+  content: '';
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
+}
+
+.hero-tag {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  background: var(--bg-dark);
+  color: var(--color-warm-white);
+  border-radius: var(--radius-full);
+  padding: var(--space-3) var(--space-4);
+  font-size: 0.6rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  box-shadow: var(--shadow-md);
+  animation: floatTag 7s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+/* Decorative circle */
+.hero-circle {
+  position: absolute;
+  width: 420px; height: 420px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hero-circle-2 {
+  position: absolute;
+  width: 560px; height: 560px;
+  border-radius: 50%;
+  border: 1px solid var(--border-light);
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hero-silhouette {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 75%;
+  max-width: 460px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+/* SVG doctor placeholder */
+.doctor-placeholder {
+  width: 100%;
+  max-width: 400px;
+}
+
+/* ============================================
+   CREDENTIALS BAR
+   ============================================ */
+#credentials {
+  background: var(--bg-dark);
+  padding: var(--space-5) 0;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+.credentials-inner {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.credentials-inner::-webkit-scrollbar { display: none; }
+
+.credential-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.credential-dot {
+  width: 4px; height: 4px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
+}
+
+.credential-text {
+  font-size: 0.6rem;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(253,252,249,0.45);
+}
+
+.credentials-sep {
+  width: 1px; height: 20px;
+  background: rgba(255,255,255,0.1);
+  flex-shrink: 0;
+}
+
+/* ============================================
+   SOBRE / ABOUT
+   ============================================ */
+#sobre {
+  background: var(--bg-primary);
+}
+
+.sobre-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-8);
+  align-items: center;
+}
+
+.sobre-image-col {
+  position: relative;
+}
+
+.sobre-image-frame {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--color-cream);
+  aspect-ratio: 4/5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sobre-image-frame::before {
+  content: '';
+  position: absolute;
+  inset: -12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  z-index: -1;
+}
+
+.sobre-badge {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  background: var(--bg-dark);
+  color: var(--color-warm-white);
+  border-radius: var(--radius-md);
+  padding: var(--space-5) var(--space-6);
+  box-shadow: var(--shadow-lg);
+  text-align: center;
+  min-width: 160px;
+}
+
+.sobre-badge-num {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: var(--accent);
+  line-height: 1;
+  display: block;
+}
+
+.sobre-badge-label {
+  font-size: 0.6rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(253,252,249,0.5);
+  display: block;
+  margin-top: 4px;
+}
+
+.sobre-content { padding: var(--space-6) 0; }
+
+.sobre-content .h-section { margin: var(--space-4) 0 var(--space-5); }
+
+.sobre-list {
+  list-style: none;
+  margin-top: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.sobre-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.sobre-list li::before {
+  content: '';
+  width: 16px; height: 16px;
+  border-radius: 50%;
+  background: var(--oak-100);
+  border: 1px solid var(--accent);
+  flex-shrink: 0;
+  margin-top: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' fill='none'%3E%3Cpath d='M2 6l3 3 5-5' stroke='%23C9A97A' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 10px;
+}
+
+/* ============================================
+   SERVIÇOS
+   ============================================ */
+#servicos {
+  background: var(--color-cream);
+}
+
+.servicos-header {
+  text-align: center;
+  max-width: 560px;
+  margin: 0 auto var(--space-8);
+}
+
+.servicos-header .h-section { margin: var(--space-4) 0 var(--space-4); }
+
+.servicos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  background: var(--border);
+}
+
+.servico-card {
+  background: var(--bg-secondary);
+  padding: var(--space-7) var(--space-6);
+  transition: var(--ease);
+  cursor: default;
+}
+
+.servico-card:hover {
+  background: var(--bg-primary);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+  position: relative;
+  z-index: 1;
+}
+
+.servico-icon {
+  width: 48px; height: 48px;
+  border-radius: var(--radius-sm);
+  background: var(--oak-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  margin-bottom: var(--space-5);
+  transition: var(--ease);
+}
+
+.servico-card:hover .servico-icon {
+  background: var(--accent);
+}
+
+.servico-card .h-card { margin-bottom: var(--space-3); }
+
+.servico-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+  font-size: 0.6rem;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  transition: var(--ease);
+}
+
+.servico-link::after { content: '→'; }
+.servico-link:hover { color: var(--accent-dark); gap: var(--space-3); }
+
+/* ============================================
+   DIFERENCIAIS
+   ============================================ */
+#diferenciais {
+  background: var(--bg-primary);
+}
+
+.diferenciais-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-8);
+  align-items: center;
+}
+
+.dif-content .h-section { margin: var(--space-4) 0 var(--space-5); }
+
+.dif-items {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin-top: var(--space-6);
+}
+
+.dif-item {
+  display: flex;
+  gap: var(--space-4);
+  padding: var(--space-5);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  transition: var(--ease);
+}
+
+.dif-item:hover {
+  border-color: var(--accent);
+  box-shadow: var(--shadow-sm);
+}
+
+.dif-item-icon {
+  font-size: 24px;
+  flex-shrink: 0;
+  width: 44px; height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--oak-100);
+  border-radius: var(--radius-sm);
+}
+
+.dif-item-body {}
+
+.dif-item-title {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.dif-visual {
+  position: relative;
+}
+
+.dif-image-wrap {
+  background: linear-gradient(135deg, var(--oak-100), var(--color-cream));
+  border-radius: var(--radius-md);
+  aspect-ratio: 3/4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.dif-card-float {
+  position: absolute;
+  top: -24px;
+  left: -24px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: var(--space-4) var(--space-5);
+  box-shadow: var(--shadow-lg);
+  min-width: 200px;
+}
+
+.dif-card-float-title {
+  font-size: 0.6rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: var(--space-3);
+}
+
+.dif-card-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-5);
+  padding: var(--space-2) 0;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.dif-card-row:last-child { border-bottom: none; }
+
+.dif-card-row-label {
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+}
+
+.dif-card-row-val {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--accent-dark);
+}
+
+/* ============================================
+   DEPOIMENTOS (dark)
+   ============================================ */
+#depoimentos {
+  background: var(--bg-dark);
+}
+
+.depoimentos-header {
+  text-align: center;
+  max-width: 480px;
+  margin: 0 auto var(--space-8);
+}
+
+.depoimentos-header .h-section { margin: var(--space-4) 0; }
+
+.depoimentos-track-wrap {
+  overflow: hidden;
+  position: relative;
+}
+
+.depoimentos-track-wrap::before,
+.depoimentos-track-wrap::after {
+  content: '';
+  position: absolute;
+  top: 0; bottom: 0;
+  width: 80px;
+  z-index: 2;
+  pointer-events: none;
+}
+.depoimentos-track-wrap::before {
+  left: 0;
+  background: linear-gradient(to right, var(--bg-dark), transparent);
+}
+.depoimentos-track-wrap::after {
+  right: 0;
+  background: linear-gradient(to left, var(--bg-dark), transparent);
+}
+
+.depoimentos-track {
+  display: flex;
+  gap: var(--space-5);
+  width: max-content;
+  animation: scrollTrack 32s linear infinite;
+}
+
+.depoimentos-track:hover { animation-play-state: paused; }
+
+.dep-card {
+  background: rgba(253,252,249,0.04);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: var(--radius-md);
+  padding: var(--space-6) var(--space-7);
+  min-width: 340px;
+  max-width: 340px;
+  flex-shrink: 0;
+}
+
+.dep-stars {
+  display: flex;
+  gap: 3px;
+  margin-bottom: var(--space-4);
+}
+
+.dep-star {
+  color: var(--color-gold);
+  font-size: 12px;
+}
+
+.dep-text {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.65;
+  color: rgba(253,252,249,0.82);
+  margin-bottom: var(--space-5);
+}
+
+.dep-author {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.dep-avatar {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--bg-dark);
+  flex-shrink: 0;
+}
+
+.dep-author-name {
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  color: rgba(253,252,249,0.7);
+}
+
+.dep-author-meta {
+  font-size: 0.6rem;
+  color: rgba(253,252,249,0.3);
+  margin-top: 2px;
+}
+
+/* ============================================
+   CTA SECTION
+   ============================================ */
+#cta {
+  background: var(--bg-primary);
+  text-align: center;
+}
+
+.cta-inner {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.cta-inner .h-section { margin: var(--space-4) 0 var(--space-5); }
+
+.cta-inner .body-lg { margin-bottom: var(--space-7); }
+
+.cta-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.cta-divider {
+  width: 60px;
+  height: 1px;
+  background: var(--border);
+  margin: var(--space-8) auto;
+}
+
+/* ============================================
+   LOCALIZACAO
+   ============================================ */
+#localizacao {
+  background: var(--color-cream);
+}
+
+.loc-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-8);
+  align-items: center;
+}
+
+.loc-info { }
+
+.loc-info .h-section { margin: var(--space-4) 0 var(--space-5); }
+
+.loc-items {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  margin-top: var(--space-6);
+}
+
+.loc-item {
+  display: flex;
+  gap: var(--space-4);
+}
+
+.loc-item-icon {
+  font-size: 20px;
+  flex-shrink: 0;
+  width: 40px; height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--oak-100);
+  border-radius: var(--radius-sm);
+  color: var(--accent-dark);
+}
+
+.loc-item-title {
+  font-size: 0.625rem;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 4px;
+}
+
+.loc-item-text {
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+
+.loc-map {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--oak-100);
+  aspect-ratio: 1/1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border: 1px solid var(--border);
+}
+
+/* Stylized map placeholder */
+.map-placeholder {
+  width: 100%;
+  height: 100%;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+#footer {
+  background: var(--bg-dark);
+  padding: var(--space-8) 0 var(--space-6);
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: var(--space-8);
+  padding-bottom: var(--space-7);
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  margin-bottom: var(--space-6);
+}
+
+.footer-brand {}
+
+.footer-logo-name {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-warm-white);
+}
+
+.footer-logo-tagline {
+  font-size: 0.5rem;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  color: rgba(253,252,249,0.3);
+  margin-bottom: var(--space-5);
+}
+
+.footer-brand-desc {
+  font-size: 0.8rem;
+  font-weight: 300;
+  line-height: 1.8;
+  color: rgba(253,252,249,0.4);
+  max-width: 300px;
+}
+
+.footer-col-title {
+  font-size: 0.6rem;
+  font-weight: 400;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: var(--space-5);
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.footer-links a {
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: rgba(253,252,249,0.4);
+  transition: color var(--ease);
+}
+
+.footer-links a:hover { color: var(--accent); }
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+.footer-copy {
+  font-size: 0.65rem;
+  color: rgba(253,252,249,0.2);
+  letter-spacing: 0.08em;
+}
+
+.footer-cro {
+  font-size: 0.65rem;
+  color: rgba(253,252,249,0.2);
+}
+
+/* ============================================
+   WHATSAPP FLOAT
+   ============================================ */
+#whatsapp-float {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 200;
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  background: #25D366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 24px rgba(37,211,102,.35);
+  cursor: pointer;
+  transition: transform var(--ease), box-shadow var(--ease);
+  animation: pulseWa 3s infinite;
+}
+
+#whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 32px rgba(37,211,102,.45);
+}
+
+#whatsapp-float svg {
+  width: 28px; height: 28px;
+  fill: white;
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(32px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes floatCard {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes floatTag {
+  0%, 100% { transform: translateY(0) rotate(-1deg); }
+  50% { transform: translateY(-8px) rotate(0deg); }
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.4); }
+}
+
+@keyframes pulseWa {
+  0%, 100% { box-shadow: 0 4px 24px rgba(37,211,102,.35); }
+  50% { box-shadow: 0 4px 40px rgba(37,211,102,.6), 0 0 0 8px rgba(37,211,102,.1); }
+}
+
+@keyframes scrollTrack {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ============================================
+   ORNAMENT LINE
+   ============================================ */
+.ornament-line {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-3);
+}
+
+.ornament-line::before {
+  content: '';
+  display: block;
+  width: 32px;
+  height: 1px;
+  background: var(--accent);
+}
+
+/* ============================================
+   QUOTE BLOCK
+   ============================================ */
+.quote-block {
+  border-left: 2px solid var(--accent);
+  padding-left: var(--space-5);
+  margin: var(--space-6) 0;
+}
+
+.quote-block p {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-style: italic;
+  font-weight: 300;
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+.quote-block cite {
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  font-style: normal;
+  display: block;
+  margin-top: var(--space-3);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 1024px) {
+  .servicos-grid { grid-template-columns: repeat(2, 1fr); }
+  .footer-top { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 768px) {
+  #hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    padding-bottom: var(--space-8);
+  }
+
+  .hero-visual { display: none; }
+  .hero-content { padding: var(--space-8) var(--space-5) 0; max-width: none; }
+  .hero-stats { gap: var(--space-5); }
+
+  .sobre-grid,
+  .diferenciais-grid,
+  .loc-grid { grid-template-columns: 1fr; }
+
+  .sobre-image-col { order: -1; }
+  .sobre-badge { bottom: 20px; right: 20px; }
+
+  .servicos-grid { grid-template-columns: 1fr; gap: 2px; }
+
+  .nav-links, .nav-cta { display: none; }
+  .hamburger { display: flex; }
+
+  .footer-top { grid-template-columns: 1fr; }
+
+  .container { padding: 0 var(--space-5); }
+
+  .hero-actions { flex-direction: column; align-items: flex-start; }
+
+  .credentials-inner { gap: var(--space-5); }
+
+  #whatsapp-float { bottom: 20px; right: 20px; }
+}
+
+@media (max-width: 480px) {
+  .hero-stats { flex-direction: column; gap: var(--space-5); }
+  .cta-actions { flex-direction: column; }
+}
+
+/* ============================================
+   SVG ILLUSTRATIONS
+   ============================================ */
+.hero-illustration {
+  width: 380px;
+  height: 380px;
+  opacity: 0.85;
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================
+     NAV
+     ============================================ -->
+<nav id="nav">
+  <a href="#" class="nav-logo">
+    <span class="nav-logo-name">Letícia Peixoto</span>
+    <span class="nav-logo-tagline">Odontologia Especializada</span>
+  </a>
+
+  <ul class="nav-links">
+    <li><a href="#sobre">Sobre</a></li>
+    <li><a href="#servicos">Serviços</a></li>
+    <li><a href="#diferenciais">Diferenciais</a></li>
+    <li><a href="#depoimentos">Depoimentos</a></li>
+    <li><a href="#localizacao">Contato</a></li>
+  </ul>
+
+  <a href="https://wa.me/5527999999999?text=Olá%2C%20gostaria%20de%20agendar%20uma%20consulta" target="_blank" class="btn btn-dark nav-cta btn-arrow">Agendar Consulta</a>
+
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobile-menu">
+  <a href="#sobre" onclick="closeMenu()">Sobre</a>
+  <a href="#servicos" onclick="closeMenu()">Serviços</a>
+  <a href="#diferenciais" onclick="closeMenu()">Diferenciais</a>
+  <a href="#depoimentos" onclick="closeMenu()">Depoimentos</a>
+  <a href="#localizacao" onclick="closeMenu()">Contato</a>
+  <a href="https://wa.me/5527999999999" target="_blank" class="btn btn-dark" style="margin-top:8px;justify-content:center;">Agendar Consulta</a>
+</div>
+
+<!-- ============================================
+     HERO
+     ============================================ -->
+<section id="hero">
+  <div class="hero-bg-ornament"></div>
+
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span class="hero-badge-dot"></span>
+      <span>Vitória, ES · Enseada do Suá</span>
+    </div>
+
+    <h1 class="h-hero hero-title">
+      Seu sorriso merece<br>
+      <span class="line2">cuidado de excelência</span>
+    </h1>
+
+    <p class="body-lg hero-desc">
+      Odontologia especializada com rigor acadêmico e calor humano. Doutora em Dentística, Professora da UFES e mais de 20 anos dedicados a transformar sorrisos.
+    </p>
+
+    <div class="hero-actions">
+      <a href="https://wa.me/5527999999999?text=Olá%2C%20gostaria%20de%20agendar%20uma%20consulta" target="_blank" class="btn btn-dark btn-arrow">Agendar Consulta</a>
+      <a href="#servicos" class="btn btn-outline">Conhecer Serviços</a>
+    </div>
+
+    <div class="hero-stats">
+      <div>
+        <span class="hero-stat-num">20+</span>
+        <span class="hero-stat-label">Anos de experiência</span>
+      </div>
+      <div>
+        <span class="hero-stat-num">Dr.</span>
+        <span class="hero-stat-label">Doutorado em Dentística</span>
+      </div>
+      <div>
+        <span class="hero-stat-num">5★</span>
+        <span class="hero-stat-label">Avaliação no Google</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-visual">
+    <div class="hero-image-wrap">
+      <div class="hero-circle"></div>
+      <div class="hero-circle-2"></div>
+
+      <!-- Ilustração central -->
+      <div class="hero-silhouette">
+        <svg class="hero-illustration" viewBox="0 0 380 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Silhouette of doctor figure -->
+          <ellipse cx="190" cy="160" rx="72" ry="80" fill="#DEC9A4" opacity="0.35"/>
+          <!-- Head -->
+          <circle cx="190" cy="110" r="52" fill="#C9A97A" opacity="0.25"/>
+          <circle cx="190" cy="108" r="44" fill="#DEC9A4" opacity="0.4"/>
+          <!-- Body/coat -->
+          <path d="M110 210 Q120 190 190 185 Q260 190 270 210 L285 370 Q285 390 190 392 Q95 390 95 370 Z" fill="#F0E6D3" opacity="0.55"/>
+          <!-- Coat lapels -->
+          <path d="M190 200 L155 270 L165 380" stroke="#C9A97A" stroke-width="1.5" opacity="0.4" fill="none"/>
+          <path d="M190 200 L225 270 L215 380" stroke="#C9A97A" stroke-width="1.5" opacity="0.4" fill="none"/>
+          <!-- Stethoscope -->
+          <path d="M155 240 Q140 280 150 310 Q165 340 190 345 Q215 340 230 310 Q240 280 225 240" stroke="#B08B57" stroke-width="2.5" fill="none" opacity="0.5"/>
+          <circle cx="190" cy="347" r="10" fill="#B08B57" opacity="0.4"/>
+          <!-- Tooth motif -->
+          <path d="M168 410 Q168 395 180 390 Q190 386 200 390 Q212 395 212 410" fill="#DEC9A4" opacity="0.5"/>
+          <path d="M175 410 Q174 400 180 397 Q190 394 200 397 Q206 400 205 410" fill="#C9A97A" opacity="0.3"/>
+        </svg>
+      </div>
+
+    </div>
+
+    <!-- Floating credential card -->
+    <div class="hero-floating-card">
+      <div class="hero-card-head">
+        <div class="hero-card-icon">🦷</div>
+        <div>
+          <div class="hero-card-title">Dra. Letícia Peixoto</div>
+          <div class="hero-card-sub">CRO · Vitória, ES</div>
+        </div>
+      </div>
+      <div class="hero-card-item">Doutora em Dentística</div>
+      <div class="hero-card-item">Professora UFES</div>
+      <div class="hero-card-item">Odontologia Digital</div>
+    </div>
+
+    <!-- Tag flutuante -->
+    <div class="hero-tag">Vista da Baía de Vitória</div>
+  </div>
+</section>
+
+<!-- ============================================
+     CREDENTIALS BAR
+     ============================================ -->
+<div id="credentials">
+  <div class="container">
+    <div class="credentials-inner">
+      <div class="credential-item">
+        <span class="credential-dot"></span>
+        <span class="credential-text">Doutora em Dentística · UFES</span>
+      </div>
+      <div class="credentials-sep"></div>
+      <div class="credential-item">
+        <span class="credential-dot"></span>
+        <span class="credential-text">Professora Universitária Ativa</span>
+      </div>
+      <div class="credentials-sep"></div>
+      <div class="credential-item">
+        <span class="credential-dot"></span>
+        <span class="credential-text">20+ Anos de Experiência Clínica</span>
+      </div>
+      <div class="credentials-sep"></div>
+      <div class="credential-item">
+        <span class="credential-dot"></span>
+        <span class="credential-text">Odontologia Digital · CAD/CAM · Scanner 3D</span>
+      </div>
+      <div class="credentials-sep"></div>
+      <div class="credential-item">
+        <span class="credential-dot"></span>
+        <span class="credential-text">Enseada do Suá · Vitória, ES</span>
+      </div>
+      <div class="credentials-sep"></div>
+      <div class="credential-item">
+        <span class="credential-dot"></span>
+        <span class="credential-text">Vista privilegiada da Baía</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================
+     SOBRE
+     ============================================ -->
+<section id="sobre" class="section-pad-lg light-section">
+  <div class="container">
+    <div class="sobre-grid">
+
+      <div class="sobre-image-col reveal">
+        <div class="sobre-image-frame">
+          <!-- Decorative illustration -->
+          <svg viewBox="0 0 320 400" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;opacity:0.65">
+            <rect width="320" height="400" fill="#EDE5D8"/>
+            <!-- Abstract portrait silhouette -->
+            <circle cx="160" cy="130" r="70" fill="#DEC9A4" opacity="0.7"/>
+            <ellipse cx="160" cy="130" rx="52" ry="56" fill="#C9A97A" opacity="0.3"/>
+            <path d="M60 280 Q80 240 160 230 Q240 240 260 280 L280 400 H40 Z" fill="#DEC9A4" opacity="0.5"/>
+            <path d="M60 280 Q80 240 160 230 Q240 240 260 280 L280 400 H40 Z" fill="none" stroke="#C9A97A" stroke-width="1" opacity="0.4"/>
+            <!-- Lab coat lines -->
+            <path d="M160 245 L130 380" stroke="#B08B57" stroke-width="1.5" opacity="0.3" stroke-dasharray="4 4"/>
+            <path d="M160 245 L190 380" stroke="#B08B57" stroke-width="1.5" opacity="0.3" stroke-dasharray="4 4"/>
+            <!-- Badge/ID card -->
+            <rect x="130" y="270" width="60" height="40" rx="3" fill="#F7F3EC" opacity="0.7" stroke="#C9A97A" stroke-width="0.8"/>
+            <line x1="137" y1="281" x2="183" y2="281" stroke="#C9A97A" stroke-width="1" opacity="0.5"/>
+            <line x1="137" y1="289" x2="170" y2="289" stroke="#D9CCBA" stroke-width="0.8" opacity="0.5"/>
+            <line x1="137" y1="296" x2="175" y2="296" stroke="#D9CCBA" stroke-width="0.8" opacity="0.5"/>
+            <!-- Ornament corner -->
+            <path d="M20 20 L60 20 L60 24 L24 24 L24 60 L20 60 Z" fill="#C9A97A" opacity="0.3"/>
+            <path d="M300 20 L260 20 L260 24 L296 24 L296 60 L300 60 Z" fill="#C9A97A" opacity="0.3"/>
+            <path d="M20 380 L60 380 L60 376 L24 376 L24 340 L20 340 Z" fill="#C9A97A" opacity="0.3"/>
+            <path d="M300 380 L260 380 L260 376 L296 376 L296 340 L300 340 Z" fill="#C9A97A" opacity="0.3"/>
+          </svg>
+
+          <div class="sobre-badge">
+            <span class="sobre-badge-num">20+</span>
+            <span class="sobre-badge-label">Anos de<br>experiência</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sobre-content reveal">
+        <div class="ornament-line">
+          <span class="eyebrow">Sobre a Dra. Letícia</span>
+        </div>
+
+        <h2 class="h-section">
+          Uma trajetória construída sobre<br>
+          <em class="italic-accent">dedicação e excelência</em>
+        </h2>
+
+        <p class="body-lg">
+          Com Doutorado em Dentística pela UFES e mais de duas décadas de experiência clínica, a Dra. Letícia Peixoto é referência em odontologia especializada em Vitória, ES. Única com Doutorado na especialidade atuando em consultório particular na região.
+        </p>
+
+        <div class="quote-block">
+          <p>Cuidamos de cada sorriso como se fosse único — porque realmente é.</p>
+          <cite>— Dra. Letícia Peixoto</cite>
+        </div>
+
+        <ul class="sobre-list">
+          <li>Doutora em Dentística pela UFES — formação acadêmica de excelência</li>
+          <li>Professora ativa da UFES — sempre na vanguarda das técnicas</li>
+          <li>Odontologia digital integrada: CAD/CAM, scanner e impressão 3D no consultório</li>
+          <li>Consultório premium com vista para a Baía de Vitória</li>
+          <li>Atendimento de toda a família — de crianças a adultos</li>
+        </ul>
+
+        <div style="margin-top: var(--space-7);">
+          <a href="#sobre" class="btn btn-dark btn-arrow">Conhecer mais</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SERVIÇOS
+     ============================================ -->
+<section id="servicos" class="section-pad-lg cream-section">
+  <div class="container">
+    <div class="servicos-header reveal">
+      <div class="ornament-line" style="justify-content:center">
+        <span class="eyebrow">Nossos Tratamentos</span>
+      </div>
+      <h2 class="h-section" style="text-align:center;margin-top:var(--space-4)">
+        Cuidado completo para<br>
+        <em class="italic-accent">o seu sorriso</em>
+      </h2>
+      <p class="body" style="text-align:center;margin-top:var(--space-4)">
+        Do atendimento preventivo à reabilitação oral completa, com tecnologia digital e técnicas atuais.
+      </p>
+    </div>
+
+    <div class="servicos-grid reveal">
+
+      <div class="servico-card">
+        <div class="servico-icon">✦</div>
+        <h3 class="h-card">Dentística Estética</h3>
+        <p class="body">Restaurações, facetas e tratamentos que devolvem beleza e função ao seu sorriso com precisão e naturalidade.</p>
+        <span class="servico-link">Saiba mais</span>
+      </div>
+
+      <div class="servico-card">
+        <div class="servico-icon">🦷</div>
+        <h3 class="h-card">Clareamento Dental</h3>
+        <p class="body">Técnicas seguras e personalizadas para um sorriso mais luminoso, com resultado duradouro e sem sensibilidade.</p>
+        <span class="servico-link">Saiba mais</span>
+      </div>
+
+      <div class="servico-card">
+        <div class="servico-icon">◈</div>
+        <h3 class="h-card">Prótese Dentária</h3>
+        <p class="body">Próteses fixas, móveis e sobre implantes com tecnologia CAD/CAM. Conforto, estética e função natural.</p>
+        <span class="servico-link">Saiba mais</span>
+      </div>
+
+      <div class="servico-card">
+        <div class="servico-icon">⟡</div>
+        <h3 class="h-card">Implantodontia</h3>
+        <p class="body">Implantes dentários com planejamento digital 3D. Substituição permanente de dentes com segurança e precisão.</p>
+        <span class="servico-link">Saiba mais</span>
+      </div>
+
+      <div class="servico-card">
+        <div class="servico-icon">◉</div>
+        <h3 class="h-card">Odontopediatria</h3>
+        <p class="body">Atendimento acolhedor para crianças, com ambiente cuidadosamente preparado para criar uma relação positiva com o dentista.</p>
+        <span class="servico-link">Saiba mais</span>
+      </div>
+
+      <div class="servico-card">
+        <div class="servico-icon">⬡</div>
+        <h3 class="h-card">Periodontia</h3>
+        <p class="body">Diagnóstico e tratamento de gengivas, prevenindo perdas dentárias e mantendo a saúde estrutural do sorriso.</p>
+        <span class="servico-link">Saiba mais</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     DIFERENCIAIS
+     ============================================ -->
+<section id="diferenciais" class="section-pad-lg light-section">
+  <div class="container">
+    <div class="diferenciais-grid">
+
+      <div class="dif-content reveal">
+        <div class="ornament-line">
+          <span class="eyebrow">O que faz a diferença</span>
+        </div>
+
+        <h2 class="h-section" style="margin: var(--space-4) 0 var(--space-5)">
+          Excelência que você<br>
+          <em class="italic-accent">sente desde o primeiro atendimento</em>
+        </h2>
+
+        <p class="body-lg">
+          Cada detalhe do nosso consultório foi pensado para oferecer uma experiência diferente — da tecnologia ao acolhimento humano.
+        </p>
+
+        <div class="dif-items">
+
+          <div class="dif-item">
+            <div class="dif-item-icon">🤲</div>
+            <div class="dif-item-body">
+              <div class="dif-item-title">Mão leve e sem dor</div>
+              <p class="body">Técnica apurada e cuidado redobrado — procedimentos tranquilos, mencionados em dezenas de avaliações.</p>
+            </div>
+          </div>
+
+          <div class="dif-item">
+            <div class="dif-item-icon">💬</div>
+            <div class="dif-item-body">
+              <div class="dif-item-title">Transparência total</div>
+              <p class="body">Cada etapa é explicada antes de ser realizada. Você entende e participa de cada decisão do seu tratamento.</p>
+            </div>
+          </div>
+
+          <div class="dif-item">
+            <div class="dif-item-icon">⏱</div>
+            <div class="dif-item-body">
+              <div class="dif-item-title">Pontualidade e respeito</div>
+              <p class="body">Seu tempo é valorizado. Pontualidade rigorosa e consultas que respeitam sua agenda.</p>
+            </div>
+          </div>
+
+          <div class="dif-item">
+            <div class="dif-item-icon">🔬</div>
+            <div class="dif-item-body">
+              <div class="dif-item-title">Tecnologia de ponta</div>
+              <p class="body">CAD/CAM, scanner intraoral e planejamento 3D integrados no próprio consultório.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="dif-visual reveal">
+        <div class="dif-image-wrap">
+          <!-- Decorative visual -->
+          <svg viewBox="0 0 400 500" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%">
+            <rect width="400" height="500" fill="#EDE5D8"/>
+            <!-- Window frame with bay view -->
+            <rect x="40" y="40" width="320" height="260" rx="3" fill="#DEC9A4" opacity="0.4"/>
+            <rect x="50" y="50" width="300" height="240" rx="2" fill="#C9A97A" opacity="0.12"/>
+            <!-- Window panes -->
+            <line x1="200" y1="50" x2="200" y2="290" stroke="#C9A97A" stroke-width="1.5" opacity="0.35"/>
+            <line x1="50" y1="170" x2="350" y2="170" stroke="#C9A97A" stroke-width="1.5" opacity="0.35"/>
+            <!-- Sky gradient in window -->
+            <rect x="55" y="55" width="140" height="110" rx="2" fill="#B08B57" opacity="0.1"/>
+            <rect x="205" y="55" width="140" height="110" rx="2" fill="#B08B57" opacity="0.08"/>
+            <!-- Waves / bay -->
+            <path d="M55 225 Q100 215 145 225 Q190 235 235 225" stroke="#9E7D30" stroke-width="1.5" opacity="0.3" fill="none"/>
+            <path d="M55 240 Q110 228 165 240 Q220 252 275 240 Q310 232 350 240" stroke="#9E7D30" stroke-width="1" opacity="0.2" fill="none"/>
+            <!-- Equipment silhouette -->
+            <rect x="140" y="320" width="120" height="140" rx="3" fill="#DEC9A4" opacity="0.5"/>
+            <circle cx="200" cy="320" r="35" fill="#C9A97A" opacity="0.2" stroke="#C9A97A" stroke-width="1.5" stroke-dasharray="6 4"/>
+            <rect x="160" y="350" width="80" height="8" rx="2" fill="#C9A97A" opacity="0.3"/>
+            <rect x="170" y="368" width="60" height="6" rx="2" fill="#D9CCBA" opacity="0.5"/>
+            <rect x="175" y="383" width="50" height="6" rx="2" fill="#D9CCBA" opacity="0.4"/>
+            <!-- Corner ornaments -->
+            <path d="M15 15 L45 15 L45 18 L18 18 L18 45 L15 45 Z" fill="#C9A97A" opacity="0.4"/>
+            <path d="M385 15 L355 15 L355 18 L382 18 L382 45 L385 45 Z" fill="#C9A97A" opacity="0.4"/>
+            <path d="M15 485 L45 485 L45 482 L18 482 L18 455 L15 455 Z" fill="#C9A97A" opacity="0.4"/>
+            <path d="M385 485 L355 485 L355 482 L382 482 L382 455 L385 455 Z" fill="#C9A97A" opacity="0.4"/>
+          </svg>
+        </div>
+
+        <!-- Float card -->
+        <div class="dif-card-float">
+          <div class="dif-card-float-title">Avaliação Clínica</div>
+          <div class="dif-card-row">
+            <span class="dif-card-row-label">Pacientes ativos</span>
+            <span class="dif-card-row-val">1.200+</span>
+          </div>
+          <div class="dif-card-row">
+            <span class="dif-card-row-label">Anos de clínica</span>
+            <span class="dif-card-row-val">20+</span>
+          </div>
+          <div class="dif-card-row">
+            <span class="dif-card-row-label">Nota Google</span>
+            <span class="dif-card-row-val">5.0 ★</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     DEPOIMENTOS (dark section)
+     ============================================ -->
+<section id="depoimentos" class="section-pad-lg dark-section">
+  <div class="container">
+    <div class="depoimentos-header reveal">
+      <div class="ornament-line" style="justify-content:center">
+        <span class="eyebrow">O que dizem sobre nós</span>
+      </div>
+      <h2 class="h-section" style="text-align:center;margin-top:var(--space-4)">
+        Quem cuida de você<br>
+        <em class="italic-accent">fala por si</em>
+      </h2>
+    </div>
+  </div>
+
+  <div class="depoimentos-track-wrap" style="margin-top: var(--space-7);">
+    <div class="depoimentos-track" id="dep-track">
+
+      <!-- Card 1 -->
+      <div class="dep-card">
+        <div class="dep-stars">
+          <span class="dep-star">★</span><span class="dep-star">★</span><span class="dep-star">★</span><span class="dep-star">★</span><span class="dep-star">★</span>
+        </div>
+        <p class="dep-text">"A Dra. Letícia tem mão muito leve, mal senti o procedimento. Consultório lindo com vista para a baía. Atendimento nota 10."</p>
+        <div class="dep-author">
+          <div class="dep-avatar">M</div>
+          <div>
+            <div class="dep-author-name">Mariana Souza</div>
+            <div class="dep-author-meta">Google Maps · Dentística</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="dep-card">
+        <div class="dep-stars">
+          <span class="dep-star">★</span><span class="dep-star">★</span><span class="dep-star">★</span><span class="dep-star">★</span><span class="dep-star">★</span>
+        </div>
+        <p class="dep-text">"Sou paciente há mais de 15 anos. Nunca vi uma profissional tão cuidadosa e humana. Explica tudo antes de fazer e me deixa tranquila."</p>
+        <div class="dep-author">
+          <div class="dep-avatar">C</div>
+          <div>
+            <div class="dep-author-name">Cláudia Ferreira</div>
+            <div class="dep-author-meta">Google Maps · Paciente fiel</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="dep-card">
+        <div class="dep-stars">
+          <span class="dep-star">★</span><span class="dep-star">★</span><span class="dep-star">★</span><span class="dep-star">★</span><span class="dep-star">★</span>
+        </div>
+        <p class="dep-text">"Meu filho de 7 anos adora vir ao consultório! A Dra. Letícia conquistou a confiança dele desde a primeira consulta. Maravilhosa."</p>
+        <div class="dep-author">
+          <div class="dep-avatar">R</div>
+          <div>
+            <div class="dep-author-name">Roberto Almeida</div>
+            <div class="dep-author-meta">Google Maps · Família</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="dep-card">
+        <div class="dep-stars">
+          <span class="dep-star">★</span><span class="dep-star">★</span><span class="dep-star">★</span><span class="dep-star">★</span><span class="dep-star">★</span>
+        </div>
+        <p class="dep-text">"Profissional excepcional. Pontual, atenciosa e competente. A vista do consultório é incrível — nunca imaginei que ir ao dentista fosse ser assim."</p>
+        <div class="dep-author">
+          <div class="dep-avatar">A</div>
+          <div>
+            <div class="dep-author-name">Ana Paula Costa</div>
+            <div class="dep-author-meta">Google Maps · Prótese</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="dep-card">
+        <div class="dep-stars">
+          <span class="dep-star">★</span><span class="dep-star">★</span><span class="dep-star">★</span><span class="dep-star">★</span><span class="dep-star">★</span>
+        </div>
+        <p class="dep-text">"Fiz meu tratamento completo com a Dra. Letícia. Resultado impecável. Consultório moderno, tecnologia de ponta e atendimento humanizado."</p>
+        <div class="dep-author">
+          <div class="dep-avatar">F</div>
+          <div>
+            <div class="dep-author-name">Felipe Carvalho</div>
+            <div class="dep-author-meta">Google Maps · Implante</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="dep-card">
+        <div class="dep-stars">
+          <span class="dep-star">★</span><span class="dep-star">★</span><span class="dep-star">★</span><span class="dep-star">★</span><span class="dep-star">★</span>
+        </div>
+        <p class="dep-text">"Toda a família se trata com a Dra. Letícia há anos. Ela é daquelas profissionais raras que unem técnica impecável com carinho genuíno."</p>
+        <div class="dep-author">
+          <div class="dep-avatar">P</div>
+          <div>
+            <div class="dep-author-name">Patrícia Mendes</div>
+            <div class="dep-author-meta">Google Maps · Família</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Duplicata para looping infinito -->
+      <div class="dep-card">
+        <div class="dep-stars">
+          <span class="dep-star">★</span><span class="dep-star">★</span><span class="dep-star">★</span><span class="dep-star">★</span><span class="dep-star">★</span>
+        </div>
+        <p class="dep-text">"A Dra. Letícia tem mão muito leve, mal senti o procedimento. Consultório lindo com vista para a baía. Atendimento nota 10."</p>
+        <div class="dep-author">
+          <div class="dep-avatar">M</div>
+          <div>
+            <div class="dep-author-name">Mariana Souza</div>
+            <div class="dep-author-meta">Google Maps · Dentística</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="dep-card">
+        <div class="dep-stars">
+          <span class="dep-star">★</span><span class="dep-star">★</span><span class="dep-star">★</span><span class="dep-star">★</span><span class="dep-star">★</span>
+        </div>
+        <p class="dep-text">"Sou paciente há mais de 15 anos. Nunca vi uma profissional tão cuidadosa e humana. Explica tudo antes de fazer e me deixa tranquila."</p>
+        <div class="dep-author">
+          <div class="dep-avatar">C</div>
+          <div>
+            <div class="dep-author-name">Cláudia Ferreira</div>
+            <div class="dep-author-meta">Google Maps · Paciente fiel</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="dep-card">
+        <div class="dep-stars">
+          <span class="dep-star">★</span><span class="dep-star">★</span><span class="dep-star">★</span><span class="dep-star">★</span><span class="dep-star">★</span>
+        </div>
+        <p class="dep-text">"Meu filho de 7 anos adora vir ao consultório! A Dra. Letícia conquistou a confiança dele desde a primeira consulta. Maravilhosa."</p>
+        <div class="dep-author">
+          <div class="dep-avatar">R</div>
+          <div>
+            <div class="dep-author-name">Roberto Almeida</div>
+            <div class="dep-author-meta">Google Maps · Família</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="dep-card">
+        <div class="dep-stars">
+          <span class="dep-star">★</span><span class="dep-star">★</span><span class="dep-star">★</span><span class="dep-star">★</span><span class="dep-star">★</span>
+        </div>
+        <p class="dep-text">"Profissional excepcional. Pontual, atenciosa e competente. A vista do consultório é incrível — nunca imaginei que ir ao dentista fosse ser assim."</p>
+        <div class="dep-author">
+          <div class="dep-avatar">A</div>
+          <div>
+            <div class="dep-author-name">Ana Paula Costa</div>
+            <div class="dep-author-meta">Google Maps · Prótese</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="dep-card">
+        <div class="dep-stars">
+          <span class="dep-star">★</span><span class="dep-star">★</span><span class="dep-star">★</span><span class="dep-star">★</span><span class="dep-star">★</span>
+        </div>
+        <p class="dep-text">"Fiz meu tratamento completo com a Dra. Letícia. Resultado impecável. Consultório moderno, tecnologia de ponta e atendimento humanizado."</p>
+        <div class="dep-author">
+          <div class="dep-avatar">F</div>
+          <div>
+            <div class="dep-author-name">Felipe Carvalho</div>
+            <div class="dep-author-meta">Google Maps · Implante</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="dep-card">
+        <div class="dep-stars">
+          <span class="dep-star">★</span><span class="dep-star">★</span><span class="dep-star">★</span><span class="dep-star">★</span><span class="dep-star">★</span>
+        </div>
+        <p class="dep-text">"Toda a família se trata com a Dra. Letícia há anos. Ela é daquelas profissionais raras que unem técnica impecável com carinho genuíno."</p>
+        <div class="dep-author">
+          <div class="dep-avatar">P</div>
+          <div>
+            <div class="dep-author-name">Patrícia Mendes</div>
+            <div class="dep-author-meta">Google Maps · Família</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     CTA
+     ============================================ -->
+<section id="cta" class="section-pad-lg light-section">
+  <div class="container">
+    <div class="cta-inner">
+      <div class="ornament-line" style="justify-content:center">
+        <span class="eyebrow">Agende sua Consulta</span>
+      </div>
+
+      <h2 class="h-section reveal" style="margin: var(--space-4) 0 var(--space-5)">
+        Cuide do seu sorriso com<br>
+        <em class="italic-accent">quem realmente entende</em>
+      </h2>
+
+      <p class="body-lg reveal">
+        Entre em contato pelo WhatsApp e agende sua avaliação. Atendimento ágil, sem filas e com horários que respeitam a sua rotina.
+      </p>
+
+      <div class="cta-divider"></div>
+
+      <div class="cta-actions reveal">
+        <a href="https://wa.me/5527999999999?text=Olá%2C%20gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Dra.%20Letícia" target="_blank" class="btn btn-dark btn-arrow">Agendar pelo WhatsApp</a>
+        <a href="tel:+5527999999999" class="btn btn-outline">(27) 99999-9999</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     LOCALIZAÇÃO
+     ============================================ -->
+<section id="localizacao" class="section-pad-lg cream-section">
+  <div class="container">
+    <div class="loc-grid">
+
+      <div class="loc-info reveal">
+        <div class="ornament-line">
+          <span class="eyebrow">Como chegar</span>
+        </div>
+
+        <h2 class="h-section" style="margin: var(--space-4) 0 var(--space-5)">
+          Localização<br>
+          <em class="italic-accent">privilegiada</em>
+        </h2>
+
+        <p class="body-lg">
+          Nosso consultório fica na Enseada do Suá, um dos bairros mais nobres de Vitória, ES — com vista deslumbrante para a Baía de Vitória.
+        </p>
+
+        <div class="loc-items">
+
+          <div class="loc-item">
+            <div class="loc-item-icon">📍</div>
+            <div>
+              <div class="loc-item-title">Endereço</div>
+              <div class="loc-item-text">Enseada do Suá · Vitória, ES<br>CEP 29050-000</div>
+            </div>
+          </div>
+
+          <div class="loc-item">
+            <div class="loc-item-icon">📱</div>
+            <div>
+              <div class="loc-item-title">WhatsApp</div>
+              <div class="loc-item-text">(27) 99999-9999<br>Respondemos em minutos</div>
+            </div>
+          </div>
+
+          <div class="loc-item">
+            <div class="loc-item-icon">🕐</div>
+            <div>
+              <div class="loc-item-title">Horário de Atendimento</div>
+              <div class="loc-item-text">Segunda a Sexta: 8h – 18h<br>Sábados: 8h – 12h (agendamento)</div>
+            </div>
+          </div>
+
+        </div>
+
+        <div style="margin-top: var(--space-7);">
+          <a href="https://wa.me/5527999999999" target="_blank" class="btn btn-dark btn-arrow">Falar pelo WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="loc-map reveal">
+        <!-- Stylized map / illustration -->
+        <svg class="map-placeholder" viewBox="0 0 480 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="480" height="480" fill="#DEC9A4" opacity="0.3"/>
+          <!-- Water (Baía) -->
+          <path d="M0 300 Q80 280 160 295 Q240 310 320 290 Q400 270 480 285 L480 480 H0 Z" fill="#C9A97A" opacity="0.15"/>
+          <path d="M0 340 Q120 315 240 335 Q360 355 480 325 L480 480 H0 Z" fill="#C9A97A" opacity="0.1"/>
+          <!-- Streets grid -->
+          <line x1="80" y1="0" x2="80" y2="300" stroke="#B08B57" stroke-width="1.5" opacity="0.25"/>
+          <line x1="160" y1="0" x2="160" y2="310" stroke="#B08B57" stroke-width="1.5" opacity="0.25"/>
+          <line x1="240" y1="0" x2="240" y2="295" stroke="#B08B57" stroke-width="1.5" opacity="0.25"/>
+          <line x1="320" y1="0" x2="320" y2="300" stroke="#B08B57" stroke-width="1.5" opacity="0.25"/>
+          <line x1="400" y1="0" x2="400" y2="290" stroke="#B08B57" stroke-width="1.5" opacity="0.25"/>
+          <line x1="0" y1="80" x2="480" y2="80" stroke="#B08B57" stroke-width="1.5" opacity="0.25"/>
+          <line x1="0" y1="160" x2="480" y2="160" stroke="#B08B57" stroke-width="1.5" opacity="0.25"/>
+          <line x1="0" y1="240" x2="480" y2="240" stroke="#B08B57" stroke-width="1.5" opacity="0.25"/>
+          <!-- Blocks -->
+          <rect x="90" y="90" width="60" height="60" rx="2" fill="#C9A97A" opacity="0.12"/>
+          <rect x="170" y="90" width="60" height="60" rx="2" fill="#C9A97A" opacity="0.1"/>
+          <rect x="90" y="170" width="60" height="60" rx="2" fill="#C9A97A" opacity="0.1"/>
+          <rect x="250" y="170" width="60" height="60" rx="2" fill="#C9A97A" opacity="0.12"/>
+          <rect x="330" y="90" width="60" height="60" rx="2" fill="#C9A97A" opacity="0.08"/>
+          <!-- Pin marker -->
+          <circle cx="240" cy="200" r="28" fill="#C9A97A" opacity="0.25"/>
+          <circle cx="240" cy="200" r="18" fill="#C9A97A" opacity="0.5"/>
+          <circle cx="240" cy="200" r="8" fill="#8F6D3D"/>
+          <line x1="240" y1="228" x2="240" y2="250" stroke="#8F6D3D" stroke-width="2"/>
+          <!-- Label -->
+          <rect x="170" y="256" width="140" height="32" rx="16" fill="#231F1B" opacity="0.8"/>
+          <text x="240" y="277" font-family="'Jost', sans-serif" font-size="11" fill="#C9A97A" text-anchor="middle" letter-spacing="2">ENSEADA DO SUÁ</text>
+          <!-- Wave decoration -->
+          <path d="M0 380 Q60 365 120 380 Q180 395 240 380 Q300 365 360 380 Q420 395 480 380" stroke="#9E7D30" stroke-width="1.5" opacity="0.3" fill="none"/>
+        </svg>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     FOOTER
+     ============================================ -->
+<footer id="footer">
+  <div class="container">
+    <div class="footer-top">
+
+      <div class="footer-brand">
+        <div class="footer-logo-name">Letícia Peixoto</div>
+        <div class="footer-logo-tagline">Odontologia Especializada</div>
+        <p class="footer-brand-desc">
+          Cuidado odontológico de excelência em Vitória, ES. Doutora em Dentística, Professora da UFES e mais de 20 anos dedicados à sua saúde bucal.
+        </p>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Tratamentos</div>
+        <ul class="footer-links">
+          <li><a href="#servicos">Dentística Estética</a></li>
+          <li><a href="#servicos">Clareamento Dental</a></li>
+          <li><a href="#servicos">Prótese Dentária</a></li>
+          <li><a href="#servicos">Implantodontia</a></li>
+          <li><a href="#servicos">Odontopediatria</a></li>
+          <li><a href="#servicos">Periodontia</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Contato</div>
+        <ul class="footer-links">
+          <li><a href="https://wa.me/5527999999999" target="_blank">WhatsApp</a></li>
+          <li><a href="tel:+5527999999999">(27) 99999-9999</a></li>
+          <li><a href="#localizacao">Como chegar</a></li>
+          <li><a href="#sobre">Sobre a Dra.</a></li>
+        </ul>
+        <div style="margin-top: var(--space-6);">
+          <div class="footer-col-title" style="margin-bottom: var(--space-3);">Horários</div>
+          <p style="font-size:0.75rem;font-weight:300;color:rgba(253,252,249,.35);line-height:1.8">
+            Seg – Sex: 8h às 18h<br>
+            Sábado: 8h às 12h
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2025 Letícia Peixoto Odontologia · Todos os direitos reservados</div>
+      <div class="footer-cro">CRO-ES · Vitória, ES · Enseada do Suá</div>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp Float -->
+<a id="whatsapp-float" href="https://wa.me/5527999999999?text=Olá%2C%20gostaria%20de%20agendar%20uma%20consulta" target="_blank" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
+<!-- ============================================
+     JAVASCRIPT
+     ============================================ -->
+<script>
+  // NAV SCROLL
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 40);
+  });
+
+  // HAMBURGER
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  hamburger.addEventListener('click', () => {
+    mobileMenu.classList.toggle('open');
+  });
+
+  function closeMenu() {
+    mobileMenu.classList.remove('open');
+  }
+
+  // SCROLL REVEAL
+  const reveals = document.querySelectorAll('.reveal');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        // Stagger delay based on siblings
+        const siblings = Array.from(entry.target.parentElement.querySelectorAll('.reveal'));
+        const idx = siblings.indexOf(entry.target);
+        entry.target.style.transitionDelay = `${idx * 0.1}s`;
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  reveals.forEach(el => observer.observe(el));
+
+  // SMOOTH ANCHOR CLOSE ON MOBILE
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', () => closeMenu());
+  });
+
+  // DEPOIMENTOS CAROUSEL — pause on hover (handled in CSS)
+  // Dynamic: duplicate track for seamless loop (already duplicated in HTML)
+
+  // PARALLAX SUBTLE (desktop only)
+  if (window.innerWidth > 768) {
+    window.addEventListener('scroll', () => {
+      const y = window.scrollY;
+      const ornament = document.querySelector('.hero-bg-ornament');
+      if (ornament) ornament.style.transform = `translateY(${y * 0.15}px)`;
+    }, { passive: true });
+  }
+</script>
+
+</body>
+</html>
